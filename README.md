@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 cassava
 ==============================
 
@@ -55,3 +56,7 @@ Project Organization
 --------
 
 <p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+=======
+# cassava
+Image classification independent capstone project for Springboard Data Science program
+>>>>>>> 89ffea75e78e09bcd44e6a16268028a6a0851525
