@@ -36,7 +36,7 @@ class ImageFromDFLoader(object):
     def get_train_data(self):
         
         """Returns train and validation image data generators."""
-                
+        data_dir = self.data_dir        
         if self.balanced:
             df = balance_df(self.df, label='label', class_size=self.class_size)
         else:
