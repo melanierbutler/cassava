@@ -26,7 +26,7 @@ class EfficientNetB4Model(object):
             self.freeze_change = False
             
         else:
-            print('Loading model from', load_fp.)
+            print('Loading model from', load_fp)
             self.model = load_model(load_fp)
             self.optimizer = self.model.optimizer
             self.loss = self.model.loss
