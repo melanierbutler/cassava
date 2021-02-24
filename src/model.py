@@ -174,11 +174,14 @@ class EfficientNetB4Model(object):
         plt.show()
 
     def predict_img(self, img_file):
+        
+        """Returns the prediction and probability for a single image"""
+        
         img = load_img(img_file, target_size=(self.img_size,self.img_size))
-        input_arr = np.array([img_to_array(test) / 255])
+        input_arr = np.array([img_to_array(img) / 255])
         probs = self.model.predict(input_arr)
         max_prob = np.round(np.max(probs * 100))
-        if self.data_loader.label_key is not None:
+        if self.data_loader is not None:
             pred = self.data_loader.label_key[np.argmax(probs)]
         else:
             pred = np.argmax(probs)
