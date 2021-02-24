@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from seaborn import heatmap
@@ -25,7 +26,7 @@ class EfficientNetB4Model(object):
             self.freeze_change = False
             
         else:
-            print('Loading model from load_fp.')
+            print('Loading model from', load_fp.)
             self.model = load_model(load_fp)
             self.optimizer = self.model.optimizer
             self.loss = self.model.loss
@@ -67,6 +68,7 @@ class EfficientNetB4Model(object):
         Block number must be entered as a string, number only."""
         
         self.unfreeze_all_layers()
+        print('All layers unfrozen.')
         blocks = [layer.name.split('_')[0].strip('block')[0] for layer in self.model.layers]
         l = blocks.index(block_num)
         for layer in self.model.layers[:l]:
@@ -143,7 +145,12 @@ class EfficientNetB4Model(object):
         hist_df[['loss', 'val_loss']].plot()
         hist_df[['acc', 'val_acc']].plot()
 
-    def evaluate(self, test_set=False):
+    def evaluate(self, data_loader=None, test_set=False):
+        
+        """Prints the classification report and confusion matrix for the model. If the model has not already been assigned a data loader for training then a data loader must be provided as input."""
+        if data_loader is not None:
+            self.data_loader = data_loader
+            
         if not test_set:
             gen = self.data_loader.eval_gen
         else:
