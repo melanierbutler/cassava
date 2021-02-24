@@ -10,6 +10,7 @@ from tensorflow.keras.layers import Dense, Dropout, BatchNormalization, GlobalAv
 from tensorflow.keras.losses import CategoricalCrossentropy
 from tensorflow.keras.models import Model, load_model
 from tensorflow.keras.optimizers import Adamax
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
 
 class EfficientNetB4Model(object):
@@ -172,4 +173,15 @@ class EfficientNetB4Model(object):
         plt.ylabel('true')
         plt.show()
 
+    def predict_img(self, img_file):
+        img = load_img(img_file, target_size=(self.img_size,self.img_size))
+        input_arr = np.array([img_to_array(test) / 255])
+        probs = self.model.predict(input_arr)
+        max_prob = np.round(np.max(probs * 100))
+        if self.data_loader.label_key is not None:
+            pred = self.data_loader.label_key[np.argmax(probs)]
+        else:
+            pred = np.argmax(probs)
+            
+        print('Class:', pred, '\nProbability:', max_prob)
         
