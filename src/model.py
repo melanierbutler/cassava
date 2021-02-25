@@ -188,3 +188,5 @@ class EfficientNetB4Model(object):
             
         print('Class:', pred, '\nProbability:', max_prob)
         
+        return str(pred), str(max_prob)
+        
