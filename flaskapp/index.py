@@ -1,14 +1,22 @@
 from flask import Flask, render_template, request, redirect, flash, url_for
-#import main
+
 import urllib.request
-from app import app
+#from app import app
 from werkzeug.utils import secure_filename
-#from main import getPrediction
+
 import os
 
 import sys
 sys.path.append('../src/')
 from inference import *
+
+
+UPLOAD_FOLDER = 'uploads'
+
+app = Flask(__name__)
+app.secret_key = "secret key"
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
 
 @app.route('/')
 def index():
@@ -36,4 +44,4 @@ def submit_file():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True, port=8000)
