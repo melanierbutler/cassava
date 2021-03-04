@@ -50,7 +50,7 @@ A Flask app was developed to demonstrate the potential use of the resulting mode
 Then navigate to the URL provided in the command line. 
 
 <figure>
-<img style='width:100%; align:center;' src='./reports/images/website_screenshots.jpg'>
-<figcaption style='text-align:center;'>Website Screenshots</figcaption>
+    <img style='width:100%; align:center;' src='./reports/images/website_screenshots.jpg'>
+    <figcaption>Website Screenshots</figcaption>
 </figure>
 
