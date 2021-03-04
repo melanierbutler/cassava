@@ -17,13 +17,13 @@ Adding to the dilemma is the difficulty and cost of getting expert feedback on w
 An EfficientNet-B4 model was trained on ~20,000 images of cassava plants. The images were crowd-sourced from farmers in Uganda and annotated by experts at the National Crops Resources Research Institute (NaCRRI) in collaboration with the AI lab at Makerere University, Kampala <a href='ttps://www.kaggle.com/c/cassava-leaf-disease-classification/overview '>[ref]</a>. Images were preprocessed using basic and Cutmix augmentation methods. Please see the capstone report for a full description of the data processing, model architecture and model training.
 
 <figure>
-<img style='width:100%; align:center;' src='./reports/images/cutmix_images.png'>
-<figcaption style='text-align:center;'>Cutmix Images</figcaption>
+    <figcaption style='text-align:center;'>Cutmix Images</figcaption>
+    <img style='width:100%; align:center;' src='./reports/images/cutmix_images.png'>
 </figure>
 
 <figure>
-<img style='width:100%; align:center;' src='./reports/images/training.jpg'>
-<figcaption style='text-align:center;'>Model Training</figcaption>
+    <figcaption style='text-align:center;'>Model Training</figcaption>
+    <img style='width:100%; align:center;' src='./reports/images/training.jpg'>
 </figure>
 
 ## Model Evaluation
@@ -31,13 +31,13 @@ An EfficientNet-B4 model was trained on ~20,000 images of cassava plants. The im
 The resulting model achieved a validation accuracy of 89% and a test accuracy of 87.8% on a hidden test set of 15,000 images. 
 
 <figure>
-<img style='width:100%; align:center;' src='./reports/images/confusion_matrix.jpg'>
-<figcaption style='text-align:center;'>Validation Confusion Matrix</figcaption>
+    <figcaption style='text-align:center;'>Validation Confusion Matrix</figcaption> 
+    <img style='width:100%; align:center;' src='./reports/images/confusion_matrix.jpg'>
 </figure>
 
 <figure>
-<img style='width:100%; align:center;' src='./reports/images/model_metrics.png'>
-<figcaption style='text-align:center;'>Model Metrics</figcaption>
+    <figcaption style='text-align:center;'>Model Metrics</figcaption>
+    <img style='width:100%; align:center;' src='./reports/images/model_metrics.png'>
 </figure>
 
 ## Flask App Development
@@ -50,7 +50,7 @@ A Flask app was developed to demonstrate the potential use of the resulting mode
 Then navigate to the URL provided in the command line. 
 
 <figure>
+    <figcaption style='text-align:center;'>Website Screenshots</figcaption>
     <img style='width:100%; align:center;' src='./reports/images/website_screenshots.jpg'>
-    <figcaption>Website Screenshots</figcaption>
 </figure>
 
