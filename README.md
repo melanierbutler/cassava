@@ -51,5 +51,6 @@ Then navigate to the URL provided in the command line.
 
 <figure>
 <img style='width:100%; align:center;' src='./reports/images/website_screenshots.jpg'>
-<figcaption style='text-align:center;'>Model Metrics</figcaption>
+<figcaption style='text-align:center;'>Website Screenshots</figcaption>
 </figure>
+
