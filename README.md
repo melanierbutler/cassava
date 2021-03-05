@@ -42,7 +42,7 @@ The resulting model achieved a validation accuracy of 89% and a test accuracy of
 
 ## Flask App Development
 
-A Flask app was developed to demonstrate the potential use of the resulting model. Through the web API a farmer could upload an image of their cassava plant and receive the model classification and probability. To Flask app is stored in the flaskapp directory of the repository. The model is too large to be hosted on Github and can be <a href='https://drive.google.com/file/d/1Kzg0Y6fHNholxjBIzHmTde_L6ujbbOzN/view?usp=sharing'>downloaded from Google Drive here</a>. To run the app locally first download the model h5py file, place it in the repository's models/ directory. Then navigate to the flaskapp directory in the command line and run the following code:
+A Flask app was developed to demonstrate the potential use of the resulting model. Through the web API a farmer could upload an image of their cassava plant and receive the model classification and probability. The Flask app is stored in the flaskapp directory of the repository, which includes a text file with package requirements. The model is too large to be hosted on Github and can be <a href='https://drive.google.com/file/d/1Kzg0Y6fHNholxjBIzHmTde_L6ujbbOzN/view?usp=sharing'>downloaded from Google Drive here</a>. To run the app locally first download the model h5py file, place it in the repository's models/ directory. Then navigate to the flaskapp directory in the command line and run the following code:
 
     export FLASK_APP=app.py
     flask run
